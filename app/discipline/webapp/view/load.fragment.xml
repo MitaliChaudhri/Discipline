@@ -1,0 +1,17 @@
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core">
+   <Dialog
+      id="confirmationDialog"
+      title="Hello {/recipient/name}">
+      
+      <OverflowToolbar>
+                                    
+                                    <ToolbarSpacer />
+                                    <Button text="Ok" />
+                                    <Button text="close" />
+                                </OverflowToolbar>
+                         
+     </Dialog> 
+    
+</core:FragmentDefinition>

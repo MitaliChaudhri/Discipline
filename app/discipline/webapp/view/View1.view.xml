@@ -1,0 +1,240 @@
+<mvc:View controllerName="discipline.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+		xmlns:tnt="sap.tnt"
+    	xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    <Page id="page" title="">
+	<tnt:ToolHeader id="shellLikeToolHeaderOnlyMandatoryControls" class="sapUiTinyMargin ">
+			 <!-- <Image src="discipline.view.logo.png" decorative="false" press="onLogoPressed" tooltip="SAP Logo">
+				<layoutData>
+					<OverflowToolbarLayoutData priority="NeverOverflow"/>
+				</layoutData>
+			</Image>  -->
+			<Title text="Report Discipline" wrapping="false">
+				<layoutData>
+					<OverflowToolbarLayoutData priority="Disappear"/>
+				</layoutData>
+			</Title>
+			<ToolbarSpacer />
+			<Avatar src="test-resources/sap/tnt/images/Woman_avatar_01.png" displaySize="XS" press=".onAvatarPressed" tooltip="Profile">
+				<layoutData>
+					<OverflowToolbarLayoutData priority="NeverOverflow"/>
+				</layoutData>
+			</Avatar>
+		</tnt:ToolHeader>
+     <Panel>
+     	<f:Form id="FormDisplay354wideDual"
+			editable="true">
+			
+			<f:layout>
+				<f:ResponsiveGridLayout
+					labelSpanXL="4"
+					labelSpanL="3"
+					labelSpanM="4"
+					labelSpanS="12"
+					adjustLabelSpan="false"
+					emptySpanXL="0"
+					emptySpanL="1"
+					emptySpanM="0"
+					emptySpanS="0"
+					columnsXL="2"
+					columnsL="2"
+					columnsM="2"
+					singleContainerFullSize="false" />
+			</f:layout>
+			<f:formContainers>
+				<f:FormContainer>
+					<f:formElements>
+						<f:FormElement label="Event Date">
+							<f:fields>
+									<DatePicker
+					id="DP1"
+					placeholder="Enter Date"
+					change="handleChange"
+					valueFormat="yyyy-MM-dd"
+					class="sapUiSmallMarginBottom"/>
+							</f:fields>
+						</f:FormElement>
+						
+					</f:formElements>
+				</f:FormContainer>
+				<f:FormContainer>
+					<f:formElements>
+						<f:FormElement label="Event Time">
+							<f:fields>
+									<TimePicker
+				id="TP5"
+				valueFormat="{/timePickers/TP5/format}"
+				displayFormat="{/timePickers/TP5/format}"
+				change="handleChange"
+				initialFocusedDateValue="{/timePickers/TP5/initialFocusedDateValue}"
+				maskMode="{= ${/maskMode/state} ? 'On' : 'Off'}"
+				placeholder="{/timePickers/TP5/placeholder}" />
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+			</f:formContainers>
+		</f:Form>
+
+			<f:Form id="d"
+			editable="true">
+				<f:title>
+				<core:Title text="Details" />
+			</f:title>
+			<f:layout>
+				<f:ResponsiveGridLayout
+				
+					labelSpanXL="4"
+					labelSpanL="3"
+					labelSpanM="4"
+					labelSpanS="12"
+					adjustLabelSpan="false"
+					emptySpanXL="0"
+					emptySpanL="4"
+					emptySpanM="0"
+					emptySpanS="0"
+					columnsXL="2"
+					columnsL="1"
+					columnsM="2"
+					singleContainerFullSize="false" />
+			</f:layout>
+			<f:formContainers >
+				<f:FormContainer >
+					<f:formElements>
+						<f:FormElement label="Employee Name">
+							<f:fields>
+									<ComboBox 
+									selectionChange="getid"
+				items="{localmodel>/employee}">
+				<core:Item key="{localmodel>id}" text="{localmodel>name1}"  />
+			</ComboBox>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Employee ID">
+							<f:fields>
+								<Input value="{localmodel>/id}"/>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Department">
+							<f:fields>
+								<ComboBox
+				items="{localmodel>/department}">
+				<core:Item key="{localmodel>key}" text="{localmodel>name}" />
+			</ComboBox>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Union/Association">
+							<f:fields>
+							<ComboBox
+				items="{localmodel>/union}">
+				<core:Item key="{localmodel>text}" text="{localmodel>text}" />
+								</ComboBox>
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				
+					<f:formElements>
+						<f:FormElement label="Issue">
+							<f:fields>
+									<ComboBox
+				items="{
+					path: '/CountriesCollection',
+					sorter: { path: 'text' }
+				}">
+				<core:Item key="{key}" text="{text}" />
+			</ComboBox>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Sub-Issue">
+							<f:fields>
+									<ComboBox
+				items="{
+					path: '/CountriesCollection',
+					sorter: { path: 'text' }
+				}">
+				<core:Item key="{key}" text="{text}" />
+			</ComboBox>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Manager">
+							<f:fields>
+									<Input value="{localmodel>/manager}"  />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="HRBP Lead">
+							<f:fields>
+									<Input value="{localmodel>/HRBP}"  />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="complainAdmin">
+							<f:fields>
+								<RadioButtonGroup id="complainAdmin" columns="5" valueState="Information" class="sapUiMediumMarginBottom">
+			<RadioButton text="Yes" />
+			<RadioButton  text="No" />
+			</RadioButtonGroup>
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+			</f:formContainers>
+		</f:Form>
+		
+
+	<VBox class="sapUiMediumMarginTop sapUiMediumMarginBegin">
+		<Label labelFor="Adminleave" text="Is a formal Respectful Workplace Complaint filed?"  />
+			<RadioButtonGroup id="Adminleave" columns="5" valueState="Information" class="sapUiMediumMarginBottom" selectedIndex="{localmodel>/vis}">
+			<RadioButton  text="Yes" />
+			<RadioButton text="No" />
+		</RadioButtonGroup>
+</VBox>
+<VBox visible="{= ${localmodel>/vis} === 0 ? true : false}">
+<Table>
+<columns>
+<Column>
+<Text  text="Admin Leave Start Date"  />
+</Column>
+<Column>
+<Text  text="Admin Leave End Date"  />
+</Column>
+<Column>
+<Text  text="Calculated Admin Leave Days"  />
+</Column>
+</columns>
+<ColumnListItem >
+<cells>
+<DatePicker
+					placeholder="Enter Date"
+					change="handleChange"
+					valueFormat="yyyy-MM-dd"
+					value="{localmodel>/dateT/0/enterdate}"
+				/>
+<DatePicker
+				
+					placeholder="Enter Date"
+					change="handleChange"
+					valueFormat="yyyy-MM-dd"
+					value = "{localmodel>/dataT/0/enddate}"
+			/>
+<Input value="{localmodel>/dataT/0/leaves}"/>
+</cells>
+</ColumnListItem>
+</Table>
+</VBox>	
+	<Text text="Describe the event:" class="sapUiMediumMarginTop sapUiMediumMarginBegin"/>
+		<TextArea id="textAreaWithoutBinding" value="{localmodel>/textarea}" showExceededText="true" class="sapUiMediumMarginBegin sapUiMediumMarginTop"
+		 maxLength="100" width="80%" liveChange="handleLiveChange" valueLiveUpdate="true" />	
+</Panel>
+<footer>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<Button type="Emphasized" text="Save as Draft"/>
+				<Button text="Load Draft"  type="Critical" press="onOpenDialog"/>
+				<Button text="Submit" type="Success" press="submitb" />
+				<Button text="Cancel" type="Reject" press="cancelb" />
+			</Toolbar>
+		</footer>
+    </Page>
+</mvc:View>

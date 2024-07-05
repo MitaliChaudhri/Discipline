@@ -1,0 +1,8 @@
+###
+POST http://localhost:41937/browse1/AdminLeaves
+Content-Type: application/json
+ 
+{
+"AdLvStDate": "2024-03-12",
+"AdLvEndDate":"2024-04-02"
+}

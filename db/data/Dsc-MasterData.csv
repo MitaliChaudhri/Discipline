@@ -1,0 +1,50 @@
+ID,mid,text,type,SubType
+1,1,Open,EventStatus,
+2,2,Closed,EventStatus,
+3,3,In Abeyance,EventStatus,
+4,4,Attendance Occurrence,Issue,
+5,5,Code of Conduct,Issue,
+6,6,Jo Performance,Issue,
+7,7,Respectful Workplace,Issue,
+8,8,Absenteeism - Non Culpable,Sub-Issue,Attendance
+9,9,Absenteeism - Culpable,Sub-Issue,Attendance
+10,10,Conflict of Interest,Sub-Issue,COC
+11,11,"Political Activity, Communication and Influence",Sub-Issue,COC
+12,12,OH&S/Safety Violation,Sub-Issue,COC
+13,13,Civic Vehicles � Operating Protocol,Sub-Issue,COC
+14,14,Living Corporate Values,Sub-Issue,COC
+15,15,Off Duty Conduct,Sub-Issue,COC
+16,16,Confidentiality and use of Information,Sub-Issue,COC
+17,17,Work Quality,Sub-Issue,COC
+18,18,Productivity,Sub-Issue,JobPerformace
+19,19,Use of City time and Property,Sub-Issue,JobPerformace
+20,20,Respectful Workplace Outcome,Sub-Issue,RW
+21,21,Respectful only Outcome,Sub-Issue,RW
+22,22,Building Standard,Department,
+23,23,City Clerks,Department,
+24,24,City Solicitor,Department,
+25,25,Communication and public Engagement,Department,
+26,26,Community standard,Department,
+27,27,Corporate Revenue,Department,
+28,28,Finance,Department,
+29,29,Planning and development,Department,
+30,30,ATU 615,Unions,
+31,31,CUPE 47,Unions,
+32,32,CUPE 59,Unions,
+33,33,CUPE 859,Unions,
+34,34,ESA 292,Unions,
+35,35,IAFF 80,Unions,
+36,36,IBEW 319,Unions,
+37,37,SCMMA 222,Unions,
+38,38,Yes,Commons,
+39,39,No,Commons,
+40,40,No violation,Outcome,
+41,41,Coaching (PIP),Outcome,
+42,42,LOE,Outcome,
+43,43,1 Day Suspension,Outcome,
+44,44,3 Day Suspension,Outcome,
+45,45,5 Day Suspension,Outcome,
+46,46,Termination,Outcome,
+47,47,Referral Employee Health Services,Outcome,
+48,48,Referal EFAP,Outcome,
+49,49,Other (with textbox),Outcome,
